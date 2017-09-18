@@ -31,3 +31,39 @@ C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2
 C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKSver2.0.csproj.GenerateResource.Cache
 C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.exe
 C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.pdb
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\QLKS.exe.config
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.exe
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.pdb
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\QLKS.exe
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\QLKS.pdb
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\CrystalDecisions.Shared.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\System.Windows.Interactivity.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\stdole.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\System.Windows.Interactivity.xml
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\x64\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKSver2.0.csprojResolveAssemblyReference.cache
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.MDI.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.Properties.Resources.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.QL_Chothuephong.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.QL_Dichvu.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.QL_Khach.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.QL_KhachSan.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.QL_Phong.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.QL_SDDV.resources
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKSver2.0.csproj.GenerateResource.Cache
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x64\Debug\QLKS.Accc.resources
