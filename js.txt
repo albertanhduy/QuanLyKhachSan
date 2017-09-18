@@ -1,0 +1,7 @@
+raats duoc quan tma trong linh vuc khoa hoc may tinh
+no dc goi la well study
+no bam 1 so nguyen x tu 0 den luc luong cua u - 1 ( luc luong cua u la rat lon)
+vao n cai package
+chon a la 1 so ngau nhien nam trong khoang p-1
+https://www.youtube.com/watch?v=7zAKXeVIAGI
+Forge of Empires
