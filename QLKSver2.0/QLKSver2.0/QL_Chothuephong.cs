@@ -124,7 +124,16 @@ namespace QLKS
             else
             {
                 
-
+                DataGridViewRow row = thuePDataGridView.Rows[thuePDataGridView.Rows.Count - 2];
+                thuePDataGridView.Rows[thuePDataGridView.Rows.Count - 2].Cells[5].Value = txt_tennv.Text;
+                ThueP thuep = new ThueP();
+                thuep.CMT = row.Cells[1].Value.ToString();
+                thuep.MaP = row.Cells[2].Value.ToString();
+                thuep.Ngayden = DateTime.Now.Date;
+                thuep.TenNV = txt_tennv.Text;
+                db.ThuePs.InsertOnSubmit(thuep);
+                //                   Phong phong = db.Phongs.FirstOrDefault(s => s.MaP == row.Cells[2].Value.ToString());
+                listthuep.Add(thuep);
             }
             try
             {
