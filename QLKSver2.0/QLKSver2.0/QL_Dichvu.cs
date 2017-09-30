@@ -33,6 +33,28 @@ namespace QLKS
             btn_them.Enabled = gt;
             btn_xoa.Enabled = gt;
         }
+        public bool ktra_gia(string gia)
+        {
+            int a;
+            if (int.TryParse(txt_gia.Text, out a) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private void Display()
+        {
+            anhien(false);
+            dt = new QLTPDataContext();
+            List<Dichvu> list = new List<Dichvu>();
+            var query = (from n in dt.Dichvus
+                         select n);
+            list = query.ToList<Dichvu>();
+            dichvuBindingSource.DataSource = list;
+        }
         private void QL_Dichvu_Load(object sender, EventArgs e)
         {
           
