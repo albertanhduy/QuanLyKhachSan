@@ -19,6 +19,20 @@ namespace QLKS
             InitializeComponent();
         }
         QLTPDataContext dt;
+
+        public void anhien(Boolean gt)
+        {
+            txt_ma.Enabled = gt;
+            txt_ten.Enabled = gt;
+            txt_gia.Enabled = gt;
+            txt_dvt.Enabled = gt;
+        }
+        public void khoacn(Boolean gt)
+        {
+            btn_sua.Enabled = gt;
+            btn_them.Enabled = gt;
+            btn_xoa.Enabled = gt;
+        }
         private void QL_Dichvu_Load(object sender, EventArgs e)
         {
           
