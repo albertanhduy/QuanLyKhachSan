@@ -18,6 +18,27 @@ namespace QLKS
         }
         QLTPDataContext db = new QLTPDataContext();
         List<ThueP> listthuep = new List<ThueP>();
+        public void ShowPhong()
+        {
+            List<Phong> list = new List<Phong>();
+            var query = (from n in db.Phongs
+                         where n.Tinhtrang == "Trống"
+                         select n);
+            list = query.ToList<Phong>();
+            phongBindingSource.DataSource = list;
+        }
+        public void ShowKhach()
+        {
+            List<Khach> list = new List<Khach>();
+            var query = (from n in db.Khaches
+                         select n);
+            list = query.ToList<Khach>();
+            khachBindingSource.DataSource = list;
+        }
+        public void ShowThueP()
+        {
+            thuePBindingSource.DataSource = listthuep;
+        }
         private void QL_Chothuephong_Load(object sender, EventArgs e)
         {
             
