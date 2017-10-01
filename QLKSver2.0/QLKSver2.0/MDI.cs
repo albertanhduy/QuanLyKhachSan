@@ -71,22 +71,26 @@ namespace QLKS
 
         private void quảnLýKháchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            QL_Khach khach = new QL_Khach();
+            khach.ShowDialog();
         }
 
         private void quảnLýPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            QL_Phong phong = new QL_Phong();
+            phong.ShowDialog();
         }
 
         private void quảnLýDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            QL_Dichvu dv = new QL_Dichvu();
+            dv.ShowDialog();
         }
 
         private void thuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            QL_Chothuephong tp = new QL_Chothuephong();
+            tp.ShowDialog();
         }
 
         private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
