@@ -41,7 +41,10 @@ namespace QLKS
         }
         private void QL_Chothuephong_Load(object sender, EventArgs e)
         {
-            
+            ShowPhong();
+            ShowKhach();
+            btn_chonp.Enabled = false;
+            btn_thue.Enabled = false;
         }
 
         private void cbb_loaip_SelectedIndexChanged(object sender, EventArgs e)
