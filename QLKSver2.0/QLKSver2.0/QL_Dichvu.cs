@@ -57,12 +57,69 @@ namespace QLKS
         }
         private void QL_Dichvu_Load(object sender, EventArgs e)
         {
-          
+            this.dichvuTableAdapter.Fill(this.qLTPDataSet.Dichvu);
+            Display();
+            anhien(false);
+            khoacn(true);
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            
+            if (btn_them.Text == "Thêm")
+            {
+                btn_them.Text = "Lưu lại";
+                anhien(true);
+                dichvuBindingSource.AddNew();
+                dichvuDataGridView.BeginEdit(true);
+                khoacn(false);
+                txt_ma.Focus();
+                btn_them.Enabled = true;
+
+            }
+            else
+            {
+                if ((txt_gia.Text != "") && (txt_ma.Text != "") && (txt_ten.Text != "") && (txt_gia.Text != ""))
+                {
+                    if (ktra_gia(txt_gia.Text) == true)
+                    {
+                        Khach ktra = (from khach in dt.Khaches
+                                      where khach.CMT == txt_ma.Text.Trim()
+                                      select khach).SingleOrDefault();
+                        if (ktra == null)
+                        {
+                            dichvuBindingSource.EndEdit();
+                            Dichvu dv = new Dichvu();
+                            dv.MaDV = txt_ma.Text;
+                            dv.TenDV = txt_ten.Text;
+                            dv.GiaDV = Double.Parse(txt_gia.Text);
+                            dv.DVT = txt_dvt.Text;
+                            dt.Dichvus.InsertOnSubmit(dv);
+                            dt.SubmitChanges();
+                            anhien(false);
+                            MessageBox.Show("Thành công!", "Thêm dịch vụ");
+                            btn_them.Text = "Thêm";
+                            khoacn(true);
+                            Display();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã dịch vụ đã tồn tại. Vui lòng kiểm tra lại");
+                            txt_ma.Focus();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn phải nhập giá là một số nguyên", "Lỗi");
+                        txt_gia.Text = "";
+                        txt_gia.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bạn phải nhập đầy đủ dữ liệu vào", "Lỗi");
+                }
+            }
+
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
