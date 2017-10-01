@@ -45,11 +45,20 @@ namespace QLKS
         }
         private void QL_Khach_Load(object sender, EventArgs e)
         {
-            
+            Display();
+            anhien(false);
+            khoacn(true);
+            db = new QLTPDataContext();
         }
         public bool ktra_cmt(string cmt)
         {
-            
+            int cmnd;
+            if ((int.TryParse(cmt, out cmnd) == true) && (cmt.Length < 10))
+            {
+                return false;
+            }
+            else
+                return true;
         }
         public bool ktra_sdt(string sdt)
         {
