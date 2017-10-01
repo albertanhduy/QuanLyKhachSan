@@ -124,12 +124,59 @@ namespace QLKS
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-           
+            if (btn_sua.Text == "Sửa")
+            {
+                btn_sua.Text = "Lưu";
+                anhien(true);
+                txt_ma.Enabled = false;
+                khoacn(false);
+                btn_sua.Enabled = true;
+            }
+            else
+            {
+                if (ktra_gia(txt_gia.Text) == true)
+                {
+                    Dichvu dvs = dt.Dichvus.FirstOrDefault(s => s.MaDV == txt_ma.Text);
+                    dvs.TenDV = txt_ten.Text;
+                    dvs.GiaDV = Double.Parse(txt_gia.Text);
+                    dvs.DVT = txt_dvt.Text;
+                    dt.SubmitChanges();
+                    anhien(false);
+                    MessageBox.Show("Sửa thành công!");
+                    btn_sua.Text = "Sửa";
+                    khoacn(true);
+                }
+                else
+                {
+                    MessageBox.Show("Bạn phải nhập giá phòng là một số nguyên", "Lỗi");
+                    txt_gia.Text = "";
+                    txt_gia.Focus();
+                }
+            }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("Bạn có thực sự muốn xóa ?", "Xóa dịch vụ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                var query = (from n in dt.SDDVs
+                             where n.MaDV == txt_ma.Text
+                             select n);
+                if (query != null)
+                {
+                    dt.SDDVs.DeleteAllOnSubmit(query);
+                }
+                Dichvu dv = (from dvu in dt.Dichvus
+                             where dvu.MaDV == txt_ma.Text
+                             select dvu).SingleOrDefault();
+                if (dv != null)
+                {
+                    dt.Dichvus.DeleteOnSubmit(dv);
+                    dt.SubmitChanges();
+                    dichvuBindingSource.RemoveCurrent();
+                    MessageBox.Show("Xóa thành công", "Xóa dịch vụ");
+                }
+            }
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
