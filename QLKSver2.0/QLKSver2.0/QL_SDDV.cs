@@ -56,7 +56,25 @@ namespace QLKS
 
         private void QL_SDDV_Load(object sender, EventArgs e)
         {
-            
+            db = new QLTPDataContext();
+            Show_TreeView();
+            Show_DV();
+        }
+
+        public void Show_theokh()
+        {
+            //           string str =  tv_khach.SelectedNode.Name;
+            var query = (from n in db.SDDVs
+                         where n.CMT == tv_khach.SelectedNode.Name
+                         select n);
+            sDDVBindingSource.DataSource = query.ToList();
+        }
+        public void Show_theoph()
+        {
+            var query = (from n in db.SDDVs
+                         where n.CMT == tv_khach.SelectedNode.Parent.Name && n.MaP == tv_khach.SelectedNode.Name
+                         select n);
+            sDDVBindingSource.DataSource = query.ToList();
         }
 
         private void tv_khach_AfterSelect(object sender, TreeViewEventArgs e)
