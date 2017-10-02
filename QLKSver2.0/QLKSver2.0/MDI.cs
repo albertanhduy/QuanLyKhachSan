@@ -126,7 +126,7 @@ namespace QLKS
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
-      
+        
             this.Close();
         }
 
@@ -140,7 +140,10 @@ namespace QLKS
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_dnhap.PerformClick();
+            }
         }
     }
 }
