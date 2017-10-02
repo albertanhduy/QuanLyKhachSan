@@ -41,7 +41,8 @@ namespace QLKS
 
         private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Accc ac = new Accc();
+            ac.ShowDialog();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
