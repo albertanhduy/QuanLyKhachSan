@@ -125,7 +125,10 @@ namespace QLKS
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  
+=======
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         private void btn_thoat_Click(object sender, EventArgs e)

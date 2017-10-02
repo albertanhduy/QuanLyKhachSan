@@ -20,6 +20,10 @@ namespace QLKS
         }
         QLTPDataContext dt;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
@@ -31,7 +35,10 @@ namespace QLKS
             txt_dvt.Enabled = gt;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void khoacn(Boolean gt)
@@ -65,7 +72,10 @@ namespace QLKS
         private void QL_Dichvu_Load(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
           
+=======
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
             this.dichvuTableAdapter.Fill(this.qLTPDataSet.Dichvu);
@@ -86,7 +96,11 @@ namespace QLKS
                 txt_ma.Focus();
                 btn_them.Enabled = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
@@ -135,7 +149,11 @@ namespace QLKS
                 }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365

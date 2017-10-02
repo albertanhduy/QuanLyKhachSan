@@ -37,7 +37,10 @@ namespace QLKS
         }
         List<ThueP> listthuep = new List<ThueP>();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void ShowPhong()
         {
             List<Phong> list = new List<Phong>();
@@ -55,6 +58,9 @@ namespace QLKS
             list = query.ToList<Khach>();
             khachBindingSource.DataSource = list;
         }
+<<<<<<< HEAD
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
+=======
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void ShowThueP()
         {
@@ -71,7 +77,11 @@ namespace QLKS
         private void cbb_loaip_SelectedIndexChanged(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             List<Phong> list = new List<Phong>();
+=======
+           List<Phong> list = new List<Phong>();
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
            List<Phong> list = new List<Phong>();
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
@@ -149,6 +159,10 @@ namespace QLKS
             else
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
                 
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
@@ -163,7 +177,10 @@ namespace QLKS
                 //                   Phong phong = db.Phongs.FirstOrDefault(s => s.MaP == row.Cells[2].Value.ToString());
                 listthuep.Add(thuep);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> ff080dd176d698732f92114dd949d56327b6a365
 =======
 >>>>>>> ff080dd176d698732f92114dd949d56327b6a365
             }
