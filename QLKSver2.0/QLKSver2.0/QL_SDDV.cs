@@ -79,7 +79,15 @@ namespace QLKS
 
         private void tv_khach_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            
+            int test = tv_khach.SelectedNode.Level;
+            if (tv_khach.SelectedNode.Level == 0)
+            {
+                Show_theokh();
+            }
+            else
+            {
+                Show_theoph();
+            }
         }
 
         private void btn_them_Click(object sender, EventArgs e)
