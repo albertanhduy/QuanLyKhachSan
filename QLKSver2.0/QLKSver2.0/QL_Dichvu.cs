@@ -186,7 +186,10 @@ namespace QLKS
 
         private void dichvuDataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            
+            txt_ma.Text = dichvuDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txt_ten.Text = dichvuDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_dvt.Text = dichvuDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txt_gia.Text = dichvuDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }
