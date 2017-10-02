@@ -17,7 +17,6 @@ namespace QLKS
             InitializeComponent();
         }
         QLTPDataContext db = new QLTPDataContext();
-        List<ThueP> listthuep = new List<ThueP>();
         public void ShowPhong()
         {
             List<Phong> list = new List<Phong>();
@@ -27,6 +26,7 @@ namespace QLKS
             list = query.ToList<Phong>();
             phongBindingSource.DataSource = list;
         }
+
         public void ShowKhach()
         {
             List<Khach> list = new List<Khach>();
@@ -35,6 +35,7 @@ namespace QLKS
             list = query.ToList<Khach>();
             khachBindingSource.DataSource = list;
         }
+        List<ThueP> listthuep = new List<ThueP>();
         public void ShowThueP()
         {
             thuePBindingSource.DataSource = listthuep;
@@ -49,7 +50,7 @@ namespace QLKS
 
         private void cbb_loaip_SelectedIndexChanged(object sender, EventArgs e)
         {
-           List<Phong> list = new List<Phong>();
+            List<Phong> list = new List<Phong>();
             var query2 = (from phong in db.Phongs
                           where phong.LoaiP == cbb_loaip.Text && phong.Tinhtrang == "Trống"
                           select phong);
@@ -123,7 +124,6 @@ namespace QLKS
             }
             else
             {
-                
                 DataGridViewRow row = thuePDataGridView.Rows[thuePDataGridView.Rows.Count - 2];
                 thuePDataGridView.Rows[thuePDataGridView.Rows.Count - 2].Cells[5].Value = txt_tennv.Text;
                 ThueP thuep = new ThueP();
@@ -134,6 +134,7 @@ namespace QLKS
                 db.ThuePs.InsertOnSubmit(thuep);
                 //                   Phong phong = db.Phongs.FirstOrDefault(s => s.MaP == row.Cells[2].Value.ToString());
                 listthuep.Add(thuep);
+
             }
             try
             {

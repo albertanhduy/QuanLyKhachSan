@@ -177,6 +177,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTPDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLTPDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTPDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLTPsuorce.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -298,6 +303,17 @@
     </None>
     <None Include="QLTPDataSet.xss">
       <DependentUpon>QLTPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTPDataSet2.xsc">
+      <DependentUpon>QLTPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLTPDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTPDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTPDataSet2.xss">
+      <DependentUpon>QLTPDataSet2.xsd</DependentUpon>
     </None>
     <None Include="QLTPsuorce.xsc">
       <DependentUpon>QLTPsuorce.xsd</DependentUpon>

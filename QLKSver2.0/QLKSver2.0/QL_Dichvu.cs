@@ -19,7 +19,6 @@ namespace QLKS
             InitializeComponent();
         }
         QLTPDataContext dt;
-
         public void anhien(Boolean gt)
         {
             txt_ma.Enabled = gt;
@@ -27,6 +26,7 @@ namespace QLKS
             txt_gia.Enabled = gt;
             txt_dvt.Enabled = gt;
         }
+
         public void khoacn(Boolean gt)
         {
             btn_sua.Enabled = gt;
@@ -57,6 +57,7 @@ namespace QLKS
         }
         private void QL_Dichvu_Load(object sender, EventArgs e)
         {
+          
             this.dichvuTableAdapter.Fill(this.qLTPDataSet.Dichvu);
             Display();
             anhien(false);
@@ -74,7 +75,7 @@ namespace QLKS
                 khoacn(false);
                 txt_ma.Focus();
                 btn_them.Enabled = true;
-
+                
             }
             else
             {
@@ -119,7 +120,7 @@ namespace QLKS
                     MessageBox.Show("Bạn phải nhập đầy đủ dữ liệu vào", "Lỗi");
                 }
             }
-
+            
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
