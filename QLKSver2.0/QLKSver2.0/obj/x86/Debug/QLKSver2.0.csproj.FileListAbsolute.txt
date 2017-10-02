@@ -33,3 +33,12 @@ C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2
 C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2.0\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2.0\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
 C:\Users\Albert Anhduy\Documents\Visual Studio 2015\Projects\QLKSver2.0\QLKSver2.0\obj\x86\Debug\QLKS.QL_Phong.resources
+<<<<<<< HEAD
+C:\Users\HuyGiang\Documents\GitHub\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\Debug\QLKS.exe.config
+C:\Users\HuyGiang\Documents\GitHub\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x86\Debug\QLKS.exe
+C:\Users\HuyGiang\Documents\GitHub\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x86\Debug\QLKS.pdb
+=======
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\bin\Debug\QLKS.exe.config
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x86\Debug\QLKS.exe
+C:\Users\diagr\Desktop\New folder\QuanLyKhachSan\QLKSver2.0\QLKSver2.0\obj\x86\Debug\QLKS.pdb
+>>>>>>> 88fab3aa94eea9fd31f5e3c43d2ae66c1b409701
