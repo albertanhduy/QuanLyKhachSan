@@ -100,7 +100,8 @@ namespace QLKS
 
         private void sửDụngDịchVụToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            QL_SDDV sddv = new QL_SDDV();
+            sddv.ShowDialog();
         }
 
         private void tìmKiếmKháchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,7 +123,7 @@ namespace QLKS
         {
 
         }
- 
+
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
