@@ -140,10 +140,7 @@ namespace QLKS
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btn_dnhap.PerformClick();
-            }
+            
         }
     }
 }
