@@ -109,20 +109,120 @@ namespace QLKS
             btn_xoa.Enabled = gt;
         }
 
-
         private void btn_them_Click(object sender, EventArgs e)
         {
-            
+            //if (tv_khach.SelectedNode.Level == 0)
+            //{
+            //    MessageBox.Show("Bạn phải chọn phòng muốn sử dụng dịch vụ", "Thông báo");
+            //}
+            //else
+            //{
+            if (btn_them.Text == "Thêm")
+            {
+                btn_them.Text = "Lưu";
+                var testcase1 = tv_khach.SelectedNode.Parent;
+                var testcase2 = dichvuDataGridView.CurrentRow.Cells[0].Value.ToString();
+                var testcase3 = tv_khach.SelectedNode.Name.ToString();
+                try
+                {
+                    var query = (from n in db.SDDVs
+                                 where n.CMT == tv_khach.SelectedNode.Parent.Name.ToString() && n.MaDV == dichvuDataGridView.CurrentRow.Cells[0].Value.ToString() && n.MaP == tv_khach.SelectedNode.Name.ToString()
+                                 select n).SingleOrDefault();
+                    if (query == null)
+                    {
+                        sDDVBindingSource.AddNew();
+                        sDDVDataGridView.BeginEdit(true);
+                        lock_control(false);
+                        btn_them.Enabled = true;
+                        string input = "";
+                        while (ktra_sluong(input) == false)
+                        {
+                            input = Interaction.InputBox("Nhập vào số lượng dịch vụ.(Phải là một số nguyên)", "Số lượng");
+                        }
+                        sDDVDataGridView.CurrentRow.Cells[3].Value = input;
+                        sDDVDataGridView.CurrentRow.Cells[1].Value = tv_khach.SelectedNode.Parent.Name.ToString();
+                        sDDVDataGridView.CurrentRow.Cells[2].Value = dichvuDataGridView.CurrentRow.Cells[0].Value.ToString();
+                        sDDVDataGridView.CurrentRow.Cells[4].Value = DateTime.Now.Date;
+                        sDDVDataGridView.CurrentRow.Cells[5].Value = tv_khach.SelectedNode.Name.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dịch vụ này đã được sử dụng trước đó. Vui lòng chọn sửa để thêm số lượng");
+                        btn_them.Text = "Thêm";
+                        lock_control(true);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    btn_them.Text = "Thêm";
+                    MessageBox.Show("Chọn phòng bờ li...", "Error");
+                }
+            }
+            else
+            {
+                sDDVBindingSource.EndEdit();
+                try
+                {
+                    SDDV dv = new SDDV();
+                    dv.CMT = tv_khach.SelectedNode.Parent.Name.ToString();
+                    dv.MaDV = dichvuDataGridView.CurrentRow.Cells[0].Value.ToString();
+                    dv.MaP = tv_khach.SelectedNode.Name.ToString();
+                    dv.NgaySD = DateTime.Now.Date;
+                    dv.Soluong = int.Parse(sDDVDataGridView.CurrentRow.Cells[3].Value.ToString());
+                    db.SDDVs.InsertOnSubmit(dv);
+                    db.SubmitChanges();
+                    MessageBox.Show("Thêm dịch vụ mới thành công", "Thêm dịch vụ");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lưu lỗi");
+                }
+                btn_them.Text = "Thêm";
+                lock_control(true);
+            }
         }
         //}
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            
+            if (btn_sua.Text == "Sửa")
+            {
+                btn_sua.Text = "Lưu";
+                lock_control(false);
+                btn_sua.Enabled = true;
+            }
+            else
+            {
+                try
+                {
+                    SDDV dv = db.SDDVs.FirstOrDefault(s => s.MaHDDV == int.Parse(sDDVDataGridView.CurrentRow.Cells[0].Value.ToString()));
+                    dv.Soluong = int.Parse(sDDVDataGridView.CurrentRow.Cells[3].Value.ToString());
+                    db.SubmitChanges();
+                    MessageBox.Show("Sửa thành công", "Sửa");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi");
+                }
+                btn_sua.Text = "Sửa";
+                lock_control(true);
+            }
         }
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("Bạn có thực sự muốn xóa ?", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                var query = (from n in db.SDDVs
+                             where n.MaHDDV == int.Parse(sDDVDataGridView.CurrentRow.Cells[0].Value.ToString())
+                             select n).SingleOrDefault();
+                if (query != null)
+                {
+                    db.SDDVs.DeleteOnSubmit(query);
+                    db.SubmitChanges();
+                    sDDVBindingSource.RemoveCurrent();
+                    MessageBox.Show("Xóa thành công", "Xóa");
+                }
+            }
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
