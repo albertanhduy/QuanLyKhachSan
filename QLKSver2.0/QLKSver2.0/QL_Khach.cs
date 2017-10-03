@@ -153,12 +153,68 @@ namespace QLKS
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
+            if (btn_sua.Text == "Sửa")
+            {
+                btn_sua.Text = "Lưu";
+                anhien(true);
+                txt_cmt.Enabled = false;
+                khoacn(false);
+                btn_sua.Enabled = true;
+            }
+            else
+            {
+                if (ktra_sdt(txt_dt.Text) == true)
+                {
+                    Khach khachs = db.Khaches.FirstOrDefault(s => s.CMT == txt_cmt.Text);
+                    khachs.Hoten = txt_ten.Text;
+                    khachs.GT = cbb_gtinh.Text;
+                    khachs.Diachi = txt_dchi.Text;
+                    khachs.SDT = txt_dt.Text;
+                    db.SubmitChanges();
+                    anhien(false);
+                    MessageBox.Show("Sửa thành công!");
+                    btn_sua.Text = "Sửa";
+                    khoacn(true);
+                }
+                else
+                {
+                    MessageBox.Show("Nhập vào số điện thoại không đúng", "Lỗi");
+                    txt_dt.Text = "";
+                    txt_dt.Focus();
+                }
+            }
 
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("Bạn có thực sự muốn xóa ?", "Xóa khách hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK) //Hỏi có xóa không
+            {
+                var dsphong = (from n in db.ThuePs
+                               where n.CMT == txt_cmt.Text
+                               select n);
+                if (dsphong != null) //Xóa trong bản thuê phòng
+                {
+                    db.ThuePs.DeleteAllOnSubmit(dsphong);
+                }
+                var dsdv = (from dv in db.SDDVs
+                            where dv.CMT == txt_cmt.Text
+                            select dv);
+                if (dsdv != null) //Xóa bảng sử dụng dịch vụ
+                {
+                    db.SDDVs.DeleteAllOnSubmit(dsdv);
+                }
+                Khach dskhach = (from Khach in db.Khaches
+                                 where Khach.CMT == txt_cmt.Text
+                                 select Khach).SingleOrDefault();
+                if (dskhach != null)
+                {
+                    db.Khaches.DeleteOnSubmit(dskhach);
+                    db.SubmitChanges();
+                    khachBindingSource.RemoveCurrent();
+                    MessageBox.Show("Xóa thành công", "Xóa khách hàng");
+                }
+            }
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
@@ -168,7 +224,17 @@ namespace QLKS
 
         private void khachdataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                txt_cmt.Text = khachdataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_ten.Text = khachdataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txt_dchi.Text = khachdataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cbb_gtinh.Text = khachdataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txt_dt.Text = khachdataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }
