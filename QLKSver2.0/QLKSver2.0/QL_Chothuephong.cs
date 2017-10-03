@@ -87,12 +87,32 @@ namespace QLKS
         private void btn_chonp_Click(object sender, EventArgs e)
         {
 
-            
+            btn_thue.Enabled = true;
+            try
+            {
+                if (thuePDataGridView.CurrentRow.Cells[2].Value != null)
+                {
+                    //                   thuePBindingSource.AddNew();
+                    //                    CurrencyManager cm;
+                    //                   cm = this.BindingContext[thuePBindingSource];
+                    thuePDataGridView.CurrentRow.Cells[1].Value = khachDataGridView.CurrentRow.Cells[0].Value.ToString();
+                }
+                //            phongDataGridView.CurrentRow.Cells[4].Value = "Dang duoc chon";
+                thuePDataGridView.CurrentRow.Cells[2].Value = phongDataGridView.CurrentRow.Cells[0].Value.ToString();
+                thuePDataGridView.CurrentRow.Cells[3].Value = DateTime.Now.Date;
+            }
+            catch
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
         }
 
         private void btn_chonk_Click(object sender, EventArgs e)
         {
-            
+            thuePBindingSource.AddNew();
+            thuePDataGridView.CurrentRow.Cells[1].Value = khachDataGridView.CurrentRow.Cells[0].Value.ToString();
+            btn_chonk.Enabled = false;
+            btn_chonp.Enabled = true;
         }
 
         private void btn_thue_Click(object sender, EventArgs e)
