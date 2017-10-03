@@ -90,6 +90,26 @@ namespace QLKS
             }
         }
 
+        public bool ktra_sluong(string sl)
+        {
+            int a;
+            if (int.TryParse(sl, out a) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void lock_control(bool gt)
+        {
+            btn_them.Enabled = gt;
+            btn_sua.Enabled = gt;
+            btn_xoa.Enabled = gt;
+        }
+
+
         private void btn_them_Click(object sender, EventArgs e)
         {
             
