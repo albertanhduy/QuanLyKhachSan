@@ -117,7 +117,31 @@ namespace QLKS
 
         private void btn_thue_Click(object sender, EventArgs e)
         {
-            
+            if (txt_tennv.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên nhân viên", "Lỗi");
+            }
+            else
+            {
+                
+
+            }
+            try
+            {
+                db.SubmitChanges();
+                MessageBox.Show("Thuê phòng thành công", "Thuê phòng");
+            }
+            catch
+            {
+            }
+            finally
+            {
+                btn_chonk.Enabled = true;
+                btn_thue.Enabled = false;
+                //                thuePBindingSource.DataSource = null;
+                //               ShowThueP();
+                txt_tennv.Text = "";
+            }
         }
     }
 }
