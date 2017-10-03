@@ -36,32 +36,6 @@ namespace QLKS
             khachBindingSource.DataSource = list;
         }
         List<ThueP> listthuep = new List<ThueP>();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-        public void ShowPhong()
-        {
-            List<Phong> list = new List<Phong>();
-            var query = (from n in db.Phongs
-                         where n.Tinhtrang == "Trống"
-                         select n);
-            list = query.ToList<Phong>();
-            phongBindingSource.DataSource = list;
-        }
-        public void ShowKhach()
-        {
-            List<Khach> list = new List<Khach>();
-            var query = (from n in db.Khaches
-                         select n);
-            list = query.ToList<Khach>();
-            khachBindingSource.DataSource = list;
-        }
-<<<<<<< HEAD
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void ShowThueP()
         {
             thuePBindingSource.DataSource = listthuep;
@@ -76,15 +50,7 @@ namespace QLKS
 
         private void cbb_loaip_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
             List<Phong> list = new List<Phong>();
-=======
-           List<Phong> list = new List<Phong>();
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-           List<Phong> list = new List<Phong>();
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
             var query2 = (from phong in db.Phongs
                           where phong.LoaiP == cbb_loaip.Text && phong.Tinhtrang == "Trống"
                           select phong);
@@ -158,14 +124,6 @@ namespace QLKS
             }
             else
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-                
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
                 DataGridViewRow row = thuePDataGridView.Rows[thuePDataGridView.Rows.Count - 2];
                 thuePDataGridView.Rows[thuePDataGridView.Rows.Count - 2].Cells[5].Value = txt_tennv.Text;
                 ThueP thuep = new ThueP();
@@ -176,13 +134,7 @@ namespace QLKS
                 db.ThuePs.InsertOnSubmit(thuep);
                 //                   Phong phong = db.Phongs.FirstOrDefault(s => s.MaP == row.Cells[2].Value.ToString());
                 listthuep.Add(thuep);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
             }
             try
             {

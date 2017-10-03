@@ -60,14 +60,6 @@ namespace QLKS
             Show_TreeView();
             Show_DV();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void Show_theokh()
         {
             //           string str =  tv_khach.SelectedNode.Name;
@@ -96,14 +88,6 @@ namespace QLKS
                 Show_theoph();
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public bool ktra_sluong(string sl)
         {
             int a;

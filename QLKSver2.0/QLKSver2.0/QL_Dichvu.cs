@@ -19,14 +19,6 @@ namespace QLKS
             InitializeComponent();
         }
         QLTPDataContext dt;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void anhien(Boolean gt)
         {
             txt_ma.Enabled = gt;
@@ -34,13 +26,7 @@ namespace QLKS
             txt_gia.Enabled = gt;
             txt_dvt.Enabled = gt;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         public void khoacn(Boolean gt)
         {
             btn_sua.Enabled = gt;
@@ -71,13 +57,7 @@ namespace QLKS
         }
         private void QL_Dichvu_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
           
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
             this.dichvuTableAdapter.Fill(this.qLTPDataSet.Dichvu);
             Display();
             anhien(false);
@@ -95,15 +75,7 @@ namespace QLKS
                 khoacn(false);
                 txt_ma.Focus();
                 btn_them.Enabled = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
             }
             else
             {
@@ -148,15 +120,7 @@ namespace QLKS
                     MessageBox.Show("Bạn phải nhập đầy đủ dữ liệu vào", "Lỗi");
                 }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
             
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         }
 
         private void btn_sua_Click(object sender, EventArgs e)

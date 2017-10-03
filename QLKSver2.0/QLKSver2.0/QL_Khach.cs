@@ -41,15 +41,7 @@ namespace QLKS
                          select n);
             list = query.ToList<Khach>();
             khachBindingSource.DataSource = list;
-<<<<<<< HEAD
-<<<<<<< HEAD
 //            khachDataGridView.AutoGenerateColumns = false;
-=======
-            //            khachDataGridView.AutoGenerateColumns = false;
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
-=======
-            //            khachDataGridView.AutoGenerateColumns = false;
->>>>>>> ff080dd176d698732f92114dd949d56327b6a365
         }
         private void QL_Khach_Load(object sender, EventArgs e)
         {
